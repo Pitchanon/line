@@ -1,0 +1,19 @@
+{
+  "name": "pitchanon/line",
+  "description": "Des",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pitchanon D.",
+      "email": "pop_phoenix@hotmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  }
+}
