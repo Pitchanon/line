@@ -24,13 +24,13 @@ Class Notify {
    * @return bool|string
    */
   public static function NotifyMessage(string $message) {
-    $queryData = ['message' => $message];
-    $queryData = http_build_query($queryData, '', '&');
+    $queryData = ["message" => $message];
+    $queryData = http_build_query($queryData, "", "&");
     $headerOptions = [
-      'http' => [
-        'method'  => 'POST',
-        'header'  => "Content-Type: application/x-www-form-urlencoded\r\n" . "Authorization: Bearer " . self::$line["token"] . "\r\n" . "Content-Length: " . strlen($queryData) . "\r\n",
-        'content' => $queryData,
+      "http" => [
+        "method"  => "POST",
+        "header"  => "Content-Type: application/x-www-form-urlencoded\r\n" . "Authorization: Bearer " . self::$line["token"] . "\r\n" . "Content-Length: " . strlen($queryData) . "\r\n",
+        "content" => $queryData,
       ],
     ];
     $context = stream_context_create($headerOptions);
