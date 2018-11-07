@@ -8,7 +8,7 @@ Class Notify {
 
   private static $line;
 
-  public static function Config($config = []) {
+  public function __construct(array $config) {
     if (!isset(self::$line) || empty(self::$line)) {
       self::$line = $config;
     }
